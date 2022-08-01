@@ -355,3 +355,203 @@ a {
     filter: grayscale(100%);
     transform: scale(1.1);
 }
+
+/* opinion section */
+
+.opinions {
+    text-align: center;
+    /* background-image: linear-gradient(to right bottom,
+            hsla(28, 98%, 34%, 0.8),
+            rgba(255, 127, 7, 0.8)),
+        url(../img/wood_wall_board.jpg); */
+    background-size: cover;
+    background-position: bottom;
+    margin-bottom: 15rem;
+}
+
+.opinions__header--main {
+    font-size: 4rem;
+    font-weight: 400;
+    color: rgb(172, 81, 2);
+}
+
+.opinion__box {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+}
+
+.review {
+    color: #323031;
+    font-size: 1.4rem;
+    padding: 5rem 0;
+    position: relative;
+    background-color: rgba(255, 255, 255, 0.601);
+    box-shadow: 1px 5px 10px rgb(172, 81, 2);
+    overflow: hidden;
+    flex: 0 0 50%;
+    flex-basis: 500px;
+    border-radius: 5px;
+}
+
+.review::before {
+    content: "\201c";
+    position: absolute;
+    left: -.9rem;
+    top: -2.5rem;
+    font-size: 20rem;
+    color: rgb(172, 81, 2);
+}
+
+.review__text {
+    margin-bottom: 2rem;
+    z-index: 2;
+    position: relative;
+}
+
+.review__person {
+    display: flex;
+    align-items: center;
+}
+
+.review__info {
+    display: flex;
+    flex-flow: row wrap;
+    margin-right: auto;
+}
+
+.review__info--name {
+    flex: 0 0 80%;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin-bottom: -.5rem;
+}
+
+.review__info--name--date {
+    font-size: .9rem;
+}
+
+.review__rating {
+    color: #323031;
+    font-size: 2.2rem;
+    font-weight: 300;
+}
+
+/* contact section */
+
+.contact {
+    height: 90vh;
+    margin-top: -10vh;
+    text-align: center;
+    background-image: linear-gradient(to right bottom,
+            hsla(28, 98%, 34%, 0.8),
+            rgba(255, 127, 7, 0.8)),
+        url(../img/deck_decking_wood.jpg);
+    background-size: cover;
+    background-position: bottom;
+
+    clip-path: polygon(0 10%, 100% 0, 100% 100%, 0 100%);
+    z-index: -1;
+}
+
+.contact__header--main {
+    font-size: 4rem;
+    font-weight: 400;
+    color: #fff;
+
+    padding-top: 40px;
+}
+
+.contact__desc {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 400;
+    color: #fff;
+}
+
+.poland-map {
+    margin-left: 200px;
+    width: 400px;
+}
+
+.container {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.container iframe {
+    padding-left: 50px;
+}
+
+.contact__details {
+    display: flex;
+    flex-direction: row;
+}
+
+.contact__details img {
+    width: 30px;
+    height: 30px;
+}
+
+.contact-form {
+    width: 400px;
+    margin: 0 auto 40px;
+    padding-top: 70px;
+}
+
+form label {
+    display: block;
+    margin-bottom: 20px;
+}
+
+form label {
+    display: block;
+}
+
+form textarea {
+    height: 10em;
+}
+
+.submite-wrap {
+    text-align: right;
+}
+
+.submite-wrap span {
+    float: left;
+    padding-top: 7px;
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.4rem;
+}
+
+form [type="submit"] {
+    background-color: #28b485;
+    color: #FFFFFF;
+    text-transform: uppercase;
+    width: 33%;
+}
+
+form [type="submit"]:hover {
+    background-color: #28b485;
+}
+
+form input,
+form textarea {
+    border: 1px solid #28b485;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px;
+}
+
+form input:focus,
+form textarea:focus {
+    outline: none;
+    border-color: #E1C184;
+}
+
+.contact-form-info label {
+    box-sizing: border-box;
+}
