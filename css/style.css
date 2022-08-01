@@ -250,3 +250,48 @@ a {
     top: 22rem;
     left: 9rem;
 }
+
+/* offer section */
+
+.terraces,
+.facades,
+.wood {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.offer__header--main {
+    width: 20%;
+    font-size: 3rem;
+    color: rgb(172, 81, 2);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    padding: 1rem 2rem;
+    margin: 0 auto;
+    border-bottom: 3px solid rgb(172, 81, 2);
+}
+
+.offer__header--paragraph {
+    font-size: 2.4rem;
+    padding: 3rem 1rem;
+    text-align: justify;
+}
+
+.terraces__product {
+    font-size: 2.5rem;
+    padding: 3.4rem 1.2rem;
+}
+
+.terraces__product h5 {
+    display: flex;
+    justify-content: flex-start;
+    font-size: 2.4rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px double rgb(255, 127, 7);
+}
+
+.terraces__product p {
+    font-size: 1.8rem;
+    padding: 2rem 0 8rem;
+    text-align: justify;
+}
