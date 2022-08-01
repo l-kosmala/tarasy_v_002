@@ -12,11 +12,13 @@ html,
 body {
     font-size: 62.5%;
     font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
 }
 
 .wrapper {
     max-width: 1200px;
     margin: 0 auto;
+    text-align: center;
 }
 
 main {
@@ -52,7 +54,7 @@ a {
 }
 
 .navigation .logo {
-    height: 4rem;
+    height: 4.5rem;
 }
 
 .nav__toggle {
@@ -208,7 +210,8 @@ a {
 .home__header--paragraph {
     font-size: 2rem;
     line-height: 3rem;
-    padding: 10rem 2rem;
+    text-align: justify;
+    padding: 10rem 6rem 10rem 2rem;
     font-weight: 300;
     color: #fff;
     width: 60%;
@@ -216,7 +219,6 @@ a {
     right: 0;
     top: 0;
 }
-
 
 .composition {
     z-index: 50;
@@ -250,7 +252,7 @@ a {
 /* offer section */
 
 .offer {
-    padding-top: 6rem;
+    padding: 11rem 0 0 0;
 }
 
 .terraces,
@@ -266,7 +268,7 @@ a {
     color: rgb(172, 81, 2);
     text-transform: uppercase;
     letter-spacing: 2px;
-    padding: 3rem 2rem 1rem;
+    padding: 9rem 2rem 1rem;
     margin: 0 6rem;
     border-bottom: 3px solid rgb(172, 81, 2);
 }
@@ -290,8 +292,9 @@ a {
     display: flex;
     justify-content: flex-start;
     font-size: 2.4rem;
-    padding-bottom: 1rem;
     border-bottom: 1px double rgb(255, 127, 7);
+
+    padding: 9rem 2rem 1rem;
 }
 
 .terraces__product p,
@@ -316,7 +319,7 @@ a {
 /* gallery section */
 
 .work {
-    padding-bottom: 8rem;
+    padding: 10rem 0;
 }
 
 .image-gallery {
@@ -360,13 +363,10 @@ a {
 
 .opinions {
     text-align: center;
-    /* background-image: linear-gradient(to right bottom,
-            hsla(28, 98%, 34%, 0.8),
-            rgba(255, 127, 7, 0.8)),
-        url(../img/wood_wall_board.jpg); */
-    background-size: cover;
-    background-position: bottom;
-    margin-bottom: 15rem;
+    /* background-size: cover;
+    background-position: bottom; */
+    margin-bottom: 7rem;
+    padding: 8rem 0 0;
 }
 
 .opinions__header--main {
@@ -378,20 +378,20 @@ a {
 .opinion__box {
     display: flex;
     flex-wrap: wrap;
-    gap: 30px;
+    gap: 30px 40px;
     justify-content: center;
 }
 
 .review {
     color: #323031;
     font-size: 1.4rem;
-    padding: 5rem 0;
+    padding: 3rem 0;
     position: relative;
     background-color: rgba(255, 255, 255, 0.601);
     box-shadow: 1px 5px 10px rgb(172, 81, 2);
     overflow: hidden;
     flex: 0 0 50%;
-    flex-basis: 500px;
+    flex-basis: 600px;
     border-radius: 5px;
 }
 
@@ -401,11 +401,12 @@ a {
     left: -.9rem;
     top: -2.5rem;
     font-size: 20rem;
-    color: rgb(172, 81, 2);
+    color: rgba(172, 81, 2, .6);
+    margin-left: 3rem;
 }
 
 .review__text {
-    margin-bottom: 2rem;
+    margin: 2rem;
     z-index: 2;
     position: relative;
 }
@@ -416,9 +417,11 @@ a {
 }
 
 .review__info {
+    margin: 1rem;
     display: flex;
     flex-flow: row wrap;
     margin-right: auto;
+    padding-left: 4rem;
 }
 
 .review__info--name {
@@ -437,13 +440,13 @@ a {
     color: #323031;
     font-size: 2.2rem;
     font-weight: 300;
+    padding-right: 2rem;
 }
 
 /* contact section */
 
 .contact {
-    height: 90vh;
-    margin-top: -10vh;
+    height: 80vh;
     text-align: center;
     background-image: linear-gradient(to right bottom,
             hsla(28, 98%, 34%, 0.8),
@@ -451,7 +454,7 @@ a {
         url(../img/deck_decking_wood.jpg);
     background-size: cover;
     background-position: bottom;
-
+    margin-bottom: 2rem;
     clip-path: polygon(0 10%, 100% 0, 100% 100%, 0 100%);
     z-index: -1;
 }
@@ -461,7 +464,7 @@ a {
     font-weight: 400;
     color: #fff;
 
-    padding-top: 40px;
+    padding-top: 5rem;
 }
 
 .contact__desc {
@@ -473,7 +476,7 @@ a {
 
 .poland-map {
     margin-left: 200px;
-    width: 400px;
+    width: 40vh;
 }
 
 .container {
@@ -528,19 +531,19 @@ form textarea {
 }
 
 form [type="submit"] {
-    background-color: #28b485;
+    background-color: rgb(172, 81, 2);
     color: #FFFFFF;
     text-transform: uppercase;
     width: 33%;
 }
 
 form [type="submit"]:hover {
-    background-color: #28b485;
+    background-color: rgb(255, 127, 7);
 }
 
 form input,
 form textarea {
-    border: 1px solid #28b485;
+    border: 1px solid rgb(172, 81, 2);
     width: 100%;
     box-sizing: border-box;
     padding: 10px;
@@ -549,7 +552,7 @@ form textarea {
 form input:focus,
 form textarea:focus {
     outline: none;
-    border-color: #E1C184;
+    border-color: rgb(172, 81, 2);
 }
 
 .contact-form-info label {
