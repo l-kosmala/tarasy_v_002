@@ -16,6 +16,11 @@ body {
 
 .wrapper {
     max-width: 1200px;
+    margin: 0 auto;
+}
+
+main {
+    padding: 0 15px;
 }
 
 a {
@@ -25,8 +30,18 @@ a {
 /* navigation */
 
 .navigation {
-    background-color: #fff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: #fff;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    padding: 0 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    z-index: 100;
 }
 
 .navigation__header {
@@ -36,7 +51,12 @@ a {
     padding: 1.5rem;
 }
 
+.navigation .logo {
+    height: 4rem;
+}
+
 .nav__toggle {
+    display: none;
     font-size: 2rem;
     color: rgb(172, 81, 2);
     background: transparent;
@@ -50,87 +70,183 @@ a {
     transform: rotate(90deg);
 }
 
-.logo {
-    height: 4rem;
-}
-
 .navigation__list {
-    height: 0;
-    overflow: hidden;
-    transition: all .3s linear;
+    list-style: none;
+    height: auto;
+    display: flex;
 }
 
-.navigation__list .link--list {
+.sub__menu {
+    position: absolute;
+    width: 300px;
+    background: #fff;
+    list-style: none;
+    /* display: flex; */
+}
+
+.sub__menu li {
+    width: 100%;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.sub__menu--1 {
+    /* display: flex; */
+    flex-direction: column;
+}
+
+.sub__menu--2,
+.sub__menu--3 {
+    right: 300px;
+    top: 0;
+    /* display: flex; */
+    flex-direction: column;
+}
+
+.navigation__list--item:hover .sub__menu--1 {
+    display: flex;
+}
+
+.sub__menu--1 li:hover .sub__menu--2 {
+    display: flex;
+}
+
+.sub__menu--1 li:hover .sub__menu--3 {
+    display: flex;
+}
+
+.sub__menu,
+.sub__menu--1,
+.sub__menu--2,
+.sub__menu--3 {
+    display: none;
+}
+
+.navigation__list--item {
+    position: relative;
+    float: left;
+}
+
+.navigation__list--item .link--list {
+    display: block;
     color: rgb(172, 81, 2);
     font-size: 2rem;
     text-transform: uppercase;
     text-decoration: none;
     letter-spacing: .1rem;
-    display: block;
-    padding: 4rem 2rem;
+    padding: 2rem 1rem;
     transition: all .3s linear;
 }
 
-.navigation__list.link--list:hover {
-    background-color: #A5D5F8;
-    color: #49A6E9;
-    padding-left: 1.5rem;
+.navigation__list--item .link--list:hover {
+    color: rgb(255, 127, 7);
 }
 
 .social__icons {
-    display: none;
+    display: flex;
+    font-size: 2rem;
+    list-style-type: none;
 }
 
-.show__links {
-    height: auto;
+.social__icons a {
+    margin: 0 .5rem;
+    color: #49A6E9;
+    transition: all .3s linear;
 }
 
-@media screen and (min-width: 800px) {
-    .nav__center {
-        max-width: 1200px;
-        margin: 0 auto;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        padding: 1rem;
-    }
-
-    .navigation__header {
-        padding: 0;
-    }
-
+@media screen and (max-width: 800px) {
     .nav__toggle {
+        display: flex;
+    }
+
+    .social__icons {
         display: none;
     }
 
     .navigation__list {
-        height: auto;
         display: flex;
-    }
-
-    .navigation__list .link--list {
-        padding: 0;
-        margin: 0 .7rem;
-    }
-
-    .navigation__list .link--list:hover:hover {
-        padding: 0;
-        background: transparent;
-    }
-
-    .social__icons {
-        display: flex;
-        font-size: 2rem;
-        list-style-type: none;
-    }
-
-    .social__icons a {
-        margin: 0 .5rem;
-        color: #49A6E9;
+        flex-direction: column;
+        height: 0;
+        overflow: hidden;
         transition: all .3s linear;
     }
 
-    .social__icons a:hover {
-        color: #8bcbf9;
+    .show__links {
+        height: auto;
     }
+}
+
+/* home section */
+.home {
+    height: 95vh;
+    width: 100%;
+    padding: 11rem 0;
+    background-image: linear-gradient(to right bottom,
+            rgba(172, 81, 2, 0.8),
+            rgba(255, 127, 7, 0.8)),
+        url(../img/deck_decking_wood.jpg);
+    background-size: cover;
+    background-position: top;
+
+    clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+    z-index: 5;
+}
+
+.u-center-text {
+    text-align: center;
+}
+
+.home__header--main {
+    font-size: 3.5rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #fff;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    position: relative;
+}
+
+.home__header--paragraph {
+    font-size: 2rem;
+    line-height: 3rem;
+    padding: 10rem 2rem;
+    font-weight: 300;
+    color: #fff;
+    width: 60%;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+
+.composition {
+    z-index: 50;
+}
+
+.composition__photo {
+    width: 35%;
+    max-width: 220px;
+    box-shadow: 0 1.5rem 4rem #000;
+    border-radius: 2px;
+    position: absolute;
+
+    z-index: 50;
+}
+
+.composition__photo--1 {
+    top: 6rem;
+    left: 7rem;
+}
+
+.composition__photo--2 {
+    top: 14rem;
+    left: 20rem;
+}
+
+.composition__photo--3 {
+    top: 22rem;
+    left: 9rem;
 }
