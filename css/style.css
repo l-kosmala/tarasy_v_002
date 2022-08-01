@@ -38,7 +38,7 @@ a {
 
 .nav__toggle {
     font-size: 2rem;
-    color: red;
+    color: rgb(172, 81, 2);
     background: transparent;
     border-color: transparent;
     transition: all .3s linear;
@@ -46,7 +46,7 @@ a {
 }
 
 .nav__toggle:hover {
-    color: #333;
+    color: rgba(255, 127, 7);
     transform: rotate(90deg);
 }
 
@@ -61,12 +61,13 @@ a {
 }
 
 .navigation__list .link--list {
-    color: #324D67;
+    color: rgb(172, 81, 2);
     font-size: 2rem;
     text-transform: uppercase;
+    text-decoration: none;
     letter-spacing: .1rem;
     display: block;
-    padding: .5rem 1rem;
+    padding: 4rem 2rem;
     transition: all .3s linear;
 }
 
@@ -81,7 +82,7 @@ a {
 }
 
 .show__links {
-    height: 15rem;
+    height: auto;
 }
 
 @media screen and (min-width: 800px) {
@@ -119,6 +120,8 @@ a {
 
     .social__icons {
         display: flex;
+        font-size: 2rem;
+        list-style-type: none;
     }
 
     .social__icons a {
