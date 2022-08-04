@@ -225,8 +225,8 @@ a {
 }
 
 .composition__photo {
-    width: 35%;
-    max-width: 220px;
+    /* width: 35%; */
+    max-width: 420px;
     box-shadow: 0 1.5rem 4rem #000;
     border-radius: 2px;
     position: absolute;
@@ -235,7 +235,7 @@ a {
 }
 
 .composition__photo--1 {
-    top: 6rem;
+    top: 8rem;
     left: 7rem;
 }
 
